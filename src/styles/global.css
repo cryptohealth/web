@@ -19,3 +19,11 @@ html, body, #root {
 body {
   -webkit-font-smoothing: antialiased;
 }
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
