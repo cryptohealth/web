@@ -3,7 +3,7 @@ import React from 'react';
 import cover from '~/assets/images/login-cover.jpg';
 import { Screen, Input, Button } from '~/components';
 
-import { Container, ForgotPassword } from './stylees';
+import { Container, ForgotPassword } from './styles';
 
 export default function Login() {
   return (
