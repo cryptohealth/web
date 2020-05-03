@@ -1,25 +1,23 @@
 import React from 'react';
 
-import { any, string } from 'prop-types';
+import PropTypes from 'prop-types';
 
-import { Container, Title, Content } from './styles';
+import { Container, Content, Title } from './styles';
 
-export function Card(props) {
-  const { children, title } = props;
+function Card({ title, children }) {
   return (
     <Container>
-      <Title>{title}</Title>
-      <Content>{children}</Content>
+      <Content>
+        <Title>{title}</Title>
+        {children}
+      </Content>
     </Container>
   );
 }
 
 Card.propTypes = {
-  children: any,
-  title: string,
+  title: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
-Card.defaultProps = {
-  children: '',
-  title: '',
-};
+export default Card;
