@@ -7,7 +7,6 @@ import { Text, TextGray, ContentCard } from './styles';
 
 export default function Dashboard() {
   const menuButtons = [{ icon: 'bars', float: 'right', actions: () => {} }];
-  function verifyPagamento() {}
 
   return (
     <Screen filter="#EDF5F2">
