@@ -5,12 +5,11 @@ import { Screen, Card, Navbar } from '~/components';
 import { Container } from './styles';
 
 export default function Dashboard() {
-  const menuButtons = [{ icon: 'bars', float: 'right', actions: () => {} }];
   return (
     <Screen filter="#EDF5F2">
-      <Navbar buttons={menuButtons} />
+      <Navbar />
       <Container>
-        <Card title="Compromissos de hoje">teste</Card>
+        <Card title="Compromissos de hoje"><input/></Card>
       </Container>
     </Screen>
   );
