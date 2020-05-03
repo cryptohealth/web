@@ -6,9 +6,9 @@ import { string } from 'prop-types';
 
 export const Container = styled.div`
   width: 100%;
-  height: auto;
-  padding: 15px;
-  display: table;
+  height: 40px;
+  display: relative;
+  margin-bottom: 15px;
 `;
 
 const IconContainer = styled.button`
@@ -17,6 +17,14 @@ const IconContainer = styled.button`
   background: transparent;
   border: none;
   float: ${(props) => (props.float ? props.float : 'right')};
+  z-index: 101;
+  position: absolute;
+  top: 15px;
+  ${(props) =>
+    props.float ? (props.float === 'left' ? 'left: 15px; text-align: left;' : 'right: 15px; text-align: right;') : 'right: 15px; text-align: right;'
+  }
+
+
 `;
 
 IconContainer.propTypes = {
@@ -28,14 +36,15 @@ IconContainer.defaultProps = {
 };
 
 const Icon = styled(FontAwesomeIcon)`
-  font-size: 28px;
-  color: rgba(0, 0, 0, 0.5);
+  font-size: 20px;
+  transition: all 0.3s;
+  color: ${props => props.active ? '#fff' : '#222'};
 `;
 
-export const Button = ({ icon }) => {
+export const Button = ({ icon, onClick, active }) => {
   return (
-    <IconContainer>
-      <Icon icon={icon} />
+    <IconContainer onClick={() => onClick()}>
+      <Icon icon={icon} active={active} />
     </IconContainer>
   );
 };
