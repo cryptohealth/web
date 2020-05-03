@@ -1,18 +1,16 @@
 import React from 'react';
 
-import { any } from 'prop-types';
+import { any, func } from 'prop-types';
 
 import { Container } from './styles';
 
-export function Button(props) {
-  const { children } = props;
-  return <Container>{children}</Container>;
+function Button({ onClick, children }) {
+  return <Container onClick={onClick}>{children}</Container>;
 }
 
 Button.propTypes = {
-  children: any,
+  children: any.isRequired,
+  onClick: func.isRequired,
 };
 
-Button.defaultProps = {
-  children: '',
-};
+export default Button;
