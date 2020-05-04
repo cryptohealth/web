@@ -6,7 +6,8 @@ import { Menu } from '../Menu';
 import { Container, Button } from './styles';
 
 export function Navbar({ buttons }) {
-  const [ menuStatus, setMenuStatus ] = useState(false);
+  const [menuStatus, setMenuStatus] = useState(false);
+
   return (
     <Container>
       <Menu active={menuStatus} />
