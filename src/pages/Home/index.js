@@ -1,12 +1,21 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 
 import { Screen, Navbar } from '~/components';
 import Card from '~/components/Card';
 
-import { Text, TextGray, ContentCard } from './styles';
+import {
+  Text,
+  TextGray,
+  ContentCard,
+  BodyAuthorizationButton,
+  ContainerAuthorizationButton,
+  AuthorizationButton,
+} from './styles';
 
 export default function Dashboard() {
   const menuButtons = [{ icon: 'bars', float: 'right', actions: () => {} }];
+  const history = useHistory();
 
   return (
     <Screen filter="#EDF5F2">
@@ -30,7 +39,6 @@ export default function Dashboard() {
               width: 20,
               borderRadius: '50%',
               backgroundColor: '#ffff00ad',
-              border: '1px solid gray',
             }}
           />
           <Text>Janeiro</Text>
@@ -42,7 +50,6 @@ export default function Dashboard() {
               width: 20,
               borderRadius: '50%',
               backgroundColor: 'rgba(0, 255, 102, 0.68)',
-              border: '1px solid gray',
             }}
           />
           <Text>Dezembro</Text>
@@ -62,10 +69,17 @@ export default function Dashboard() {
         </ContentCard>
         <ContentCard>
           <Text>Consulta</Text>
-          <TextGray>01/12/2020</TextGray>
+          <TextGray>01/12/2019</TextGray>
           <TextGray>Ver detalhes</TextGray>
         </ContentCard>
       </Card>
+      <ContainerAuthorizationButton>
+        <BodyAuthorizationButton>
+          <AuthorizationButton onClick={() => history.push('/authorization')}>
+            Autorizar
+          </AuthorizationButton>
+        </BodyAuthorizationButton>
+      </ContainerAuthorizationButton>
     </Screen>
   );
 }
