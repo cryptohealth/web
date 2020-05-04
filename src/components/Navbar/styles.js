@@ -1,8 +1,8 @@
 import React from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import styled from 'styled-components';
 import { string } from 'prop-types';
+import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 100%;
@@ -21,10 +21,11 @@ const IconContainer = styled.button`
   position: absolute;
   top: 15px;
   ${(props) =>
-    props.float ? (props.float === 'left' ? 'left: 15px; text-align: left;' : 'right: 15px; text-align: right;') : 'right: 15px; text-align: right;'
-  }
-
-
+    props.float
+      ? props.float === 'left'
+        ? 'left: 15px; text-align: left;'
+        : 'right: 15px; text-align: right;'
+      : 'right: 15px; text-align: right;'}
 `;
 
 IconContainer.propTypes = {
@@ -38,7 +39,7 @@ IconContainer.defaultProps = {
 const Icon = styled(FontAwesomeIcon)`
   font-size: 20px;
   transition: all 0.3s;
-  color: ${props => props.active ? '#fff' : '#222'};
+  color: ${(props) => (props.active ? '#fff' : '#222')};
 `;
 
 export const Button = ({ icon, onClick, active }) => {

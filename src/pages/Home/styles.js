@@ -44,4 +44,10 @@ export const AuthorizationButton = styled.div`
   font-size: 15px;
   padding-top: 20px;
   box-shadow: rgb(107, 251, 147) 0px 13px 14px 9px;
+  transition: 0s box-shadow;
+
+  &:hover {
+    transition-delay: 1s;
+    box-shadow: inset #1c1c1c75 -1px 9px 14px 9px;
+  }
 `;
