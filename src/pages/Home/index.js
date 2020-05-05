@@ -37,8 +37,9 @@ export default function Dashboard() {
           <span
             style={{
               width: 20,
-              borderRadius: '50%',
-              backgroundColor: '#ffff00ad',
+              height: 20,
+              borderRadius: 20,
+              backgroundColor: '#EBDD17',
             }}
           />
           <Text>Janeiro</Text>
@@ -48,8 +49,9 @@ export default function Dashboard() {
           <span
             style={{
               width: 20,
-              borderRadius: '50%',
-              backgroundColor: 'rgba(0, 255, 102, 0.68)',
+              height: 20,
+              borderRadius: 20,
+              backgroundColor: '#0CD590',
             }}
           />
           <Text>Dezembro</Text>

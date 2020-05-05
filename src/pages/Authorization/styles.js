@@ -43,5 +43,5 @@ export const IconCircleContainer = styled.div`
   border: 2px solid white;
   border-radius: 50%;
   height: 150px;
-  box-shadow: inset 0px 0px 6px 1px #ffffff99;
+  box-shadow: inset 0px 0px 6px 1px #fff;
 `;

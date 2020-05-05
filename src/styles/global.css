@@ -6,6 +6,8 @@
   outline: 0;
   box-sizing: border-box;
   font-family: 'Nunito', sans-serif;
+  list-style: none;
+  text-decoration: none;
 }
 
 *:focus {
@@ -26,4 +28,11 @@ body {
 
 .mb-30 {
   margin-bottom: 30px;
+}
+
+.logo {
+  width: 100%;
+  margin-bottom: 20px;
+  object-fit: contain;
+  object-position: center;
 }

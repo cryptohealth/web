@@ -17,7 +17,7 @@ function Authorization() {
   const history = useHistory();
 
   return (
-    <Screen filter="#5ad58f">
+    <Screen filter="#0CD590">
       <MenuContainer>
         <IconContainer onClick={() => history.push('/home')}>
           <FontAwesomeIcon icon="angle-left" active />
