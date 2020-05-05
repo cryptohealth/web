@@ -1,23 +1,21 @@
 import React from 'react';
 
-import { any, string } from 'prop-types';
-
 import { Background, Container, User, Items } from './styles';
 
-export function Menu(props) {
+export function Menu({ active }) {
   const items = [
-    {title: 'Pagina inicial', link: '#'},
-    {title: 'Minhas informações', link: '#'},
-    {title: 'Minhas alergias', link: '#'},
-    {title: 'Meus contatos', link: '#'},
-    {title: 'Histórico médico', link: '#'},
-    {title: 'Anotações', link: '#'},
-    {title: 'Sair', link: '/entrar'},
-  ]
+    { title: 'Pagina inicial', link: '/home' },
+    { title: 'Minhas informações', link: '/home' },
+    { title: 'Minhas alergias', link: '#' },
+    { title: 'Meus contatos', link: '#' },
+    { title: 'Histórico médico', link: '#' },
+    { title: 'Anotações', link: '#' },
+    { title: 'Sair', link: '/' },
+  ];
   return (
     <>
-      <Background active={props.active} />
-      <Container active={props.active}>
+      <Background active={active} />
+      <Container active={active}>
         <User
           name="André Paulo"
           identifier="123.456.789-10"
